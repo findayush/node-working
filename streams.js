@@ -23,12 +23,12 @@ server.on("request", (req, res) => {
   //   });
 
   //Problem with Solution 2is that response cannot send the data nearly as fast as it is receiving it from file -backpressure
-
   //Solution 3
   const readable = fs.createReadStream("./test-file.txt");
-  readable.pipe(res); // readableSource.pipe(writableDestination)
+  readable.pipe(res);
+  // readableSource.pipe(writableDestination)
 });
 
 server.listen(9800, "127.0.0.1", () => {
-  console.log("Listening. . .");
+  console.log("Listening...");
 });
