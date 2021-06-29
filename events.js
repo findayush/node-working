@@ -6,8 +6,8 @@ class Sales extends EventEmitter {
     super();
   }
 }
-const myEmitter = new Sales();
 //const myEmitter = new EventEmitter();
+const myEmitter = new Sales();
 
 myEmitter.on("newSale", () => {
   console.log("Sales done");
